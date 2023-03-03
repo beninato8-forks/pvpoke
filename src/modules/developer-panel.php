@@ -9,6 +9,7 @@
 		<a class="button dev-default-ivs" href="#">Generate default IV's</a>
 		<a class="button dev-shadow-stats" href="#">Update Shadow stats</a>
 		<!--<a class="button dev-validate-family" href="#">Validate Family IDs</a>-->
+		<a class="button dev-silph-weights" href="#">Update Silph weights</a>
 
 		<h4>Quick Links</h4>
 		<a class="button" href="<?php echo $WEB_ROOT; ?>data/overrideEditor.php">Override Editor</a>
@@ -47,6 +48,12 @@
 		$devPanel.find("a.dev-validate-family").click(function(e){
 			e.preventDefault();
 			gm.validateFamilyData();
+		});
+
+		// Update cup with weights from silph api
+		$devPanel.find("a.dev-silph-weights").click(function(e){
+			e.preventDefault();
+			gm.updateSilphWeights();
 		});
 
 		// Open the current page link on production

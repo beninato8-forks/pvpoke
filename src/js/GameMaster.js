@@ -450,6 +450,61 @@ var GameMaster = (function () {
 			console.log("Family validation complete");
 		}
 
+		// Get usage data from Silph API and update weights for cup
+
+		object.updateSilphWeights = async () => {
+
+			let cupName = '';
+			while (cupName.length === 0) {
+				cupName = window.prompt("Silph Cup Name")
+			}
+
+			console.log(cupName)
+
+			const percentToWeight = (percent) => {
+				percent = percent / 10
+				return 2 * (percent + 0.5)
+			}
+
+			const silphToPvPoke = (name) => {
+				name = name.replace("-", "_")
+				name = name.replace(/alola$/, "alolan")
+				return name
+			}
+
+			const weights = await fetch(`https://silph.gg/api/cup/${cupName}/stats`)
+				.then(response => response.json())
+				.then(data => {
+					const result = {}
+					for (const [key, value] of Object.entries(data.all)) {
+						let name = silphToPvPoke(key)
+						result[name] = percentToWeight(value.percent)
+					}
+					return result
+				})
+				.catch((err) => {
+					console.log(`Error fetching: ${err}`)
+					return {}
+				})
+
+			console.log(weights)
+
+			$.ajax({
+				dataType: "json",
+				url: `${webRoot}data/overrides/${cupName}/1500.json?v=${siteVersion}`,
+				mimeType: "application/json",
+				success: function(data) {
+					console.log(data)
+				},
+				error: function(request, error) {
+					console.log("Request: " + JSON.stringify(request));
+					console.log(error);
+				}
+			});
+
+			console.log(`${cupName} weights updated`);
+		}
+
 		// Analyze Charged Moves and bucket them into archetypes
 
 		object.generateMoveArchetypes = function(){
