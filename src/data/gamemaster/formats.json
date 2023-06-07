@@ -78,7 +78,7 @@
 		"cp": 1500,
 		"meta": "great",
 		"showCup": false,
-		"showFormat": false,
+		"showFormat": true,
 		"showMeta": false,
 		"hideRankings": true
 	},
@@ -99,6 +99,24 @@
 		"meta": "masterfactions",
 		"showCup": true,
 		"showFormat": false,
+		"showMeta": true
+	},
+	{
+		"title": "Silph Factions (Ragnar)",
+		"cup": "ragnar",
+		"cp": 1500,
+		"meta": "ragnar",
+		"showCup": true,
+		"showFormat": true,
+		"showMeta": true
+	},
+	{
+		"title": "Silph Factions (Echo)",
+		"cup": "echo",
+		"cp": 1500,
+		"meta": "echo",
+		"showCup": true,
+		"showFormat": true,
 		"showMeta": true
 	},
 	{
