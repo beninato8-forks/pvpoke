@@ -125,7 +125,7 @@ if(! isset($OG_IMAGE)){
 <?php endif; ?>
 -->
 
-<link id="favicon" rel="icon" href="<?php echo $WEB_ROOT; ?>img/themes/sunflower/favicon.png">
+<link id="favicon" rel="icon" href="<?php echo $WEB_ROOT; ?>img/favicon2.png">
 
 <link rel="stylesheet" type="text/css" href="<?php echo $WEB_ROOT; ?>css/style.css?v=167">
 
