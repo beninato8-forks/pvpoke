@@ -2,4 +2,4 @@ build:
   docker:
     web: docker/Dockerfile
 run:
-  web: docker-compose -f docker/docker-compose.yml up
+  web: docker run -v ../src:/var/www/html/pvpoke/src --name pvpoke -p 80:80 
