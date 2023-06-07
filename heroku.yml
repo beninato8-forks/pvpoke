@@ -1,5 +1,0 @@
-build:
-  docker:
-    web: Dockerfile.web
-run:
-  web: sleep infinity

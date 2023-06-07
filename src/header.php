@@ -289,6 +289,8 @@ if(! isset($OG_IMAGE)){
 			</div>
 		</div>
 	</header>
+
 	<div class="main-wrap">
 		<div id="main">
+			<h2>🌮 Knockoff KOTH Rankings for PGR Factions 🌮</h2>
 			<div class="hide mega-warning"><b>Stats for unreleased Mega Evolutions are speculative. Don't invest any resources until they're officially released.</b></div>
