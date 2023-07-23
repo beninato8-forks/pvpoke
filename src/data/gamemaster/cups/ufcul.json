@@ -1,0 +1,13 @@
+{
+    "name": "ufcul",
+    "title": "UFC Heavyweight (Ultra League)",
+    "include": [{
+        "filterType": "type",
+        "values": ["bug", "dark", "dragon", "electric", "fairy", "fighting", "fire", "flying", "ghost", "grass", "ground", "ice", "normal", "poison", "psychic", "rock", "steel", "water"]
+    }],
+    "exclude": [{
+        "filterType": "id",
+        "values": ["cresselia", "registeel", "swampert", "charizard", "giratina_altered", "cobalion", "deoxys_defense", "stunfisk_galarian", "swampert_mega", "charizard_mega_y", "zygarde"]
+    }],
+    "allowSameSpecies": true
+}

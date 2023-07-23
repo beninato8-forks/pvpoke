@@ -175,6 +175,15 @@
 		"showMeta": true
 	},
 	{
+		"title": "UFC Heavyweight (Ultra League)",
+		"cup": "ufcul",
+		"cp": 2500,
+		"meta": "ufcul",
+		"showCup": true,
+		"showFormat": true,
+		"showMeta": true
+	},
+	{
 		"title": "Custom",
 		"cup": "custom",
 		"cp": 1500,
