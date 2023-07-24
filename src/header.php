@@ -48,6 +48,10 @@ if(isset($_COOKIE['settings'])){
 		$_SETTINGS->colorblindMode = 0;
 	}
 
+	if(! isset($_SETTINGS->breakpointPercent)){
+		$_SETTINGS->breakpointPercent = 0;
+	}
+
 
 	// Validate the gamemaster setting, only allow these options
 	$gamemasters = ["gamemaster", "gamemaster-mega", "gamemaster-paldea"];
@@ -66,7 +70,8 @@ if(isset($_COOKIE['settings'])){
 		'xls' => 1,
 		'rankingDetails' => 'one-page',
 		'hardMovesetLinks' => 0,
-		'colorblindMode' => 0
+		'colorblindMode' => 0,
+		'breakpointPercent' => 0
 	];
 }
 
@@ -170,6 +175,7 @@ if(! isset($OG_IMAGE)){
 			rankingDetails: "<?php echo htmlspecialchars($_SETTINGS->rankingDetails); ?>",
 			hardMovesetLinks: <?php echo intval($_SETTINGS->hardMovesetLinks); ?>,
 			colorblindMode: <?php echo intval($_SETTINGS->colorblindMode); ?>,
+			breakpointPercent: <?php echo intval($_SETTINGS->breakpointPercent); ?>,
 		};
 	<?php else: ?>
 
@@ -183,7 +189,8 @@ if(! isset($OG_IMAGE)){
 			xls: true,
 			rankingDetails: "one-page",
 			hardMovesetLinks: 0,
-			colorblindMode: 0
+			colorblindMode: 0,
+			breakpointPercent: 0
 		};
 
 	<?php endif; ?>

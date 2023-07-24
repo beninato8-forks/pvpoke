@@ -1318,15 +1318,20 @@ var InterfaceMaster = (function () {
 
 							case "breakpoint":
 								var breakpointMode = $(".battle-results.matrix .breakpoint-mode option:selected").val();
-
+								const getDisplayStat = (breakpoint) => {
+									if (settings.breakpointPercent == 1) { //config
+										return Math.round((breakpoint / r.matchups[n].opponent.stats.hp) * 100)
+									}
+									return breakpoint
+								}
 								if(breakpointMode == "fast"){
-									displayStat = r.matchups[n].breakpoint;
+									displayStat = getDisplayStat(r.matchups[n].breakpoint);
 									baseValue = rankings[0].matchups[n].breakpoint;
 								} else if(breakpointMode == "cm1"){
-									displayStat = r.matchups[n].breakpointCM1;
+									displayStat = getDisplayStat(r.matchups[n].breakpointCM1);
 									baseValue = rankings[0].matchups[n].breakpointCM1;
 								} else if(breakpointMode == "cm2"){
-									displayStat = r.matchups[n].breakpointCM2;
+									displayStat = getDisplayStat(r.matchups[n].breakpointCM2);
 									baseValue = rankings[0].matchups[n].breakpointCM2;
 								}
 
@@ -1334,9 +1339,9 @@ var InterfaceMaster = (function () {
 									displayStat = "-";
 								}
 
-								if(displayStat > baseValue){
+								if(displayStat > baseValue && settings.breakpointPercent != 1){
 									r.matchups[n].difference = "win";
-								} else if(displayStat < baseValue){
+								} else if(displayStat < baseValue && settings.breakpointPercent != 1){
 									r.matchups[n].difference = "lose";
 								}
 								break;
@@ -1409,6 +1414,9 @@ var InterfaceMaster = (function () {
 							}
 						}
 
+						if (self.matrixMode === "breakpoint" && settings.breakpointPercent == 1) {
+							displayStat = displayStat + "%"
+						}
 						$cell.find("a").html("<span></span>"+displayStat);
 						$cell.find("a").css("background-color", "rgb("+color[0]+","+color[1]+","+color[2]+")");
 						$cell.find("a").addClass(ratingClass);
