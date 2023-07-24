@@ -94,9 +94,9 @@ require_once 'header.php';
 			</select>
 		</div>
 
-		<h3>Breakpoint Percent</h3>
+		<!-- <h3>Breakpoint Percent</h3>
 		<div class="check breakpointPercent <?php if($_SETTINGS->breakpointPercent == 1) : ?>on<?php endif; ?>"><span></span>Breakpoint Percent</div>
-		<p>Show percent damage instead of total damage for breakpoints in matrix battles.</p>
+		<p>Show percent damage instead of total damage for breakpoints in matrix battles.</p> -->
 
 		<div class="save button">Save Settings</div>
 	</div>
