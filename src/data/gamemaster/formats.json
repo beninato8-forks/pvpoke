@@ -55,6 +55,16 @@
 		"showMeta": true
 	},
 	{
+		"title": "UFC ML 100",
+		"cup": "ufcml",
+		"cp": 10000,
+		"meta": "ufc-ml-100",
+		"showCup": false,
+		"showFormat": false,
+		"showMeta": true,
+		"hideRankings": true
+	},
+	{
 		"title": "UFC Heavyweight (Master League)",
 		"cup": "ufcml",
 		"cp": 10000,

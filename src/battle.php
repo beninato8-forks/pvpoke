@@ -384,7 +384,11 @@ require_once 'header.php';
 			</div>
 
 			<p class="battle">Explore battle results against this group of Pokemon.</p>
-			<p class="breakpoint">Explore move damage dealt to this group of Pokemon.</p>
+			<p class="breakpoint">Explore move damage dealt to this group of Pokemon.
+				<h4>Breakpoint Percent</h4>
+				<p class="check use-percent"><span></span>Show percent damage instead of total damage for breakpoints in matrix battles.</p>
+			</p>
+			
 			<p class="bulkpoint">Explore move damage received from this group.</p>
 			<p class="attack">Explore Attack stat differential against this group of Pokemon to analyze Charged Move ties.</p>
 
