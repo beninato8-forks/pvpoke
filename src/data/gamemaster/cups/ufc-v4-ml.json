@@ -1,0 +1,16 @@
+{
+    "name": "ufc-v4-ml",
+    "title": "UFC Heavyweight (Master League)",
+    "include": [{
+        "filterType": "type",
+        "values": ["bug", "dark", "dragon", "electric", "fairy", "fighting", "fire", "flying", "ghost", "grass", "ground", "ice", "normal", "poison", "psychic", "rock", "steel", "water"]
+    }],
+    "exclude": [{
+        "filterType": "id",
+        "values": ["steelix_mega", "scizor_mega", "diancie_mega", "rayquaza_mega", "gengar_mega", "salamence_mega", "kyogre_primal", "groudon_primal", "gardevoir_mega", "gyarados_mega", "charizard_mega_y", "tyranitar_mega", "swampert_mega", "latios_mega", "latias_mega"]
+    }, {
+        "filterType": "id",
+        "values": ["zygarde", "zygarde_complete", "zygarde_10"]
+    }],
+    "allowSameSpecies": true
+}

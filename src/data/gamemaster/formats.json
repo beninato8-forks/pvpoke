@@ -37,6 +37,25 @@
 		"showMeta": true
 	},
 	{
+		"title": "UFC ML 100",
+		"cup": "ufc-v4-ml",
+		"cp": 10000,
+		"meta": "ufc-v4-ml-100",
+		"showCup": false,
+		"showFormat": false,
+		"showMeta": true,
+		"hideRankings": true
+	},
+	{
+		"title": "UFCv4 Master League",
+		"cup": "ufc-v4-ml",
+		"cp": 10000,
+		"meta": "ufc-v4-ml",
+		"showCup": true,
+		"showFormat": true,
+		"showMeta": true
+	},
+	{
 		"title": "Master Premier",
 		"cup": "premier",
 		"cp": 10000,
